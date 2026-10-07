@@ -37,6 +37,8 @@ rmdir /S /Q install 2>nul & git\cmd\git.exe clone https://github.com/eliotmuirgr
 ```
 Now you have your install repository with the scripts which makes it easier to do a staged install.
 
+Go to: [Step 1](doc/step1.md)
+
 
 ## How to clean things up on windows in at the command line:
 
