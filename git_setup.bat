@@ -37,6 +37,8 @@ echo Using Git:
 where git
 git --version || exit /b 1
 
+git config --global core.pager cat
+
 rem ------------------------------------------------------------
 rem Identity
 rem ------------------------------------------------------------
