@@ -1,14 +1,8 @@
 @echo off
 
-if "%~1"=="" (
-    echo ERROR: Missing path to Working Dir.
-    echo.
-    echo Usage:
-    echo   save_config ^<path-to-Working Dir^>
-    exit /b 1
-)
+call "%~dp0config_edit.bat" || exit /b 1
 
-set "REPO=%~1"
+set "REPO=%IGUANA_WORKING_DIR%IguanaMainRepo"
 set "CONFIG=IguanaConfiguration.xml"
 set "TEMP=%TEMP%\iguana_config_%RANDOM%"
 
@@ -29,17 +23,14 @@ if not exist "%REPO%\HEAD" (
 )
 
 echo Creating temporary working copy...
-
-git clone "%REPO%/IguanaMainRepo" "%TEMP%" || goto :error
+git clone "%REPO%" "%TEMP%" || goto :error
 
 echo Copying configuration...
-
 copy /Y "%CONFIG%" "%TEMP%\%CONFIG%" >nul || goto :error
 
 pushd "%TEMP%" || goto :error
 
 echo Committing configuration...
-
 git add "%CONFIG%" || goto :error_popd
 
 git diff --cached --quiet
@@ -53,17 +44,13 @@ if not errorlevel 1 (
 git commit -m "Update Iguana configuration" || goto :error_popd
 
 echo Pushing configuration to IguanaMainRepo...
-
 git push || goto :error_popd
 
 popd
 
 echo.
 echo Successfully saved %CONFIG%.
-echo.
-
 goto :cleanup
-
 
 :error_popd
 popd
@@ -71,10 +58,8 @@ popd
 :error
 echo.
 echo ERROR: Failed to save %CONFIG%.
-echo.
 rmdir /S /Q "%TEMP%" 2>nul
 exit /b 1
-
 
 :cleanup
 rmdir /S /Q "%TEMP%" 2>nul
