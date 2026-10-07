@@ -50,6 +50,12 @@ popd
 
 echo.
 echo Successfully saved %CONFIG%.
+
+rmdir /s /q %IGUANA_WORKING_DIR%IguanaConfigurationRepo
+rmdir /s /q %IGUANA_WORKING_DIR%edit
+rmdir /s /q %IGUANA_WORKING_DIR%run
+echo "Removed IguanaConfigurationRepo edit and run directories"
+
 goto :cleanup
 
 :error_popd
