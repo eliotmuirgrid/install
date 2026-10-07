@@ -41,5 +41,7 @@ echo Successfully created:
 echo   %OUTPUT%
 echo.
 type %OUTPUT%
+%IGUANA_APP_DIR%iguana_service --install
+
 
 exit /b 0
