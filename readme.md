@@ -1,44 +1,55 @@
-# Controlled upgrade for Windows Iguana 6
+# Install Iguana Manually Procedure
 
-This is a series of powershell scripts intended to assist customers do a controlled upgrade of Iguana 6.
+## 1. Create a working directory
 
-To start run either this one line to get a portable git and to clone this repository so you have access to the scripts.
+Open **Command Prompt** and run:
 
-Open command shell
-
-Use cd to your home directory
-
-```
-cd C:\Users\<your username>\
-```
-
-Then make an install directory and move into it.
-
-```
+```cmd
+cd %USERPROFILE%
 mkdir install
 cd install
 ```
-Then download MinGit - a portable implementation of GIT:
 
-```
+## 2. Download MinGit
+
+```cmd
 curl.exe -L -o MinGit.zip "https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.2/MinGit-2.56.0.2-64-bit.zip"
 ```
 
-Then unpack it:
+## 3. Unpack Git
 
-```
+```cmd
 mkdir git && tar.exe -xf MinGit.zip -C git
 ```
 
-Now get clone the this install repository so you have the scripts you need:
+## 4. Put this Git first in the PATH
 
+```cmd
+set "PATH=%CD%\git\cmd;%PATH%"
 ```
-rmdir /S /Q install 2>nul & git\cmd\git.exe clone https://github.com/eliotmuirgrid/install.git && cd install
+
+Now verify we're using it:
+
+```cmd
+where git
+git --version
 ```
-Now you have your install repository with the scripts which makes it easier to do a staged install.
 
-Go to: [Step 1](doc/step1.md)
+The nice part is that **from this point onward the documentation can just say `git`**. We don't need `git\cmd\git.exe` everywhere.
 
+## 5. Download the installation scripts
+
+I'd clone them into a `scripts` directory, since we're already calling the parent directory `install`:
+
+```cmd
+git clone https://github.com/eliotmuirgrid/install.git scripts
+```
+
+Then:
+
+```cmd
+cd scripts
+```
 
 ## How to clean things up on windows in at the command line:
 
