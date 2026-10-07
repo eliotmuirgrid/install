@@ -39,8 +39,6 @@ The nice part is that **from this point onward the documentation can just say `g
 
 ## 5. Download the installation scripts
 
-I'd clone them into a `scripts` directory, since we're already calling the parent directory `install`:
-
 ```cmd
 git clone https://github.com/eliotmuirgrid/install.git scripts
 ```
