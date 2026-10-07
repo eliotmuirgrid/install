@@ -3,7 +3,7 @@ setlocal
 
 set "SOURCE=IguanaConfiguration.xml"
 set "WORK=_IguanaMainRepo_temp"
-set "TARGET=IguanaMainRepo"
+set "TARGET=../Iguana/IguanaMainRepo"
 
 if not exist "%SOURCE%" (
     echo ERROR: %SOURCE% not found.
