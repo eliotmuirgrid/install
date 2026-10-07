@@ -1,10 +1,10 @@
 @echo off
 
 if "%~1"=="" (
-    echo ERROR: Missing path to IguanaMainRepo.
+    echo ERROR: Missing path to Working Dir.
     echo.
     echo Usage:
-    echo   save_config ^<path-to-IguanaMainRepo^>
+    echo   save_config ^<path-to-Working Dir^>
     exit /b 1
 )
 
@@ -30,7 +30,7 @@ if not exist "%REPO%\HEAD" (
 
 echo Creating temporary working copy...
 
-git clone "%REPO%" "%TEMP%" || goto :error
+git clone "%REPO%/IguanaMainRepo" "%TEMP%" || goto :error
 
 echo Copying configuration...
 
