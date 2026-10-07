@@ -33,5 +33,6 @@ if errorlevel 1 (
 echo.
 echo Successfully updated %CONFIG%.
 echo.
+type %CONFIG%
 
 exit /b 0
