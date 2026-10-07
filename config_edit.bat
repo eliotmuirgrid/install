@@ -5,7 +5,7 @@ set "IGUANA_HTTP_PORT=6545"
 set "IGUANA_WORKING_DIR=C:\IguanaConfig\"
 set "IGUANA_LOG_DIR=C:\Iguana\logs\"
 set "IGUANA_SERVICE_NAME=Iguana2"
-set "IGUANA_SERVICE_DESCRIPTION=Iguana install "
+set "IGUANA_SERVICE_DESCRIPTION=Iguana New Install"
 
 
 echo.
