@@ -1,6 +1,6 @@
 @echo off
 
-call "%~dp0config_edit.bat" || exit /b 1
+call "%~dp0a-Configure.bat" || exit /b 1
 
 if exist "%IGUANA_APP_DIR%iguana.exe" (
     echo Iguana is already installed in %IGUANA_APP_DIR% - skipping download.
