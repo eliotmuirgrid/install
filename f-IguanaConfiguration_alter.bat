@@ -1,6 +1,6 @@
 @echo off
 
-call "%~dp0config_edit.bat" || exit /b 1
+call "%~dp0a-Configure.bat" || exit /b 1
 
 set "CONFIG=IguanaConfiguration.xml"
 

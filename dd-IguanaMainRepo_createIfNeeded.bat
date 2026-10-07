@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-call "%~dp0config_edit.bat" || exit /b 1
+call "%~dp0a-Configure.bat" || exit /b 1
 
 set "SOURCE=IguanaConfiguration.xml"
 set "WORK=_IguanaMainRepo_temp"
