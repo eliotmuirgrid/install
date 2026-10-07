@@ -40,6 +40,6 @@ echo.
 echo Successfully created:
 echo   %OUTPUT%
 echo.
-cat %OUTPUT%
+type %OUTPUT%
 
 exit /b 0
