@@ -1,6 +1,6 @@
 @echo off
 
-set "IGUANA_APP_DIR=..\Iguana\"
+set "IGUANA_APP_DIR=C:\Iguana-6.2.0\"
 set "IGUANA_HTTP_PORT=6999"
 set "IGUANA_WORKING_DIR=C:\IguanaConfig\"
 set "IGUANA_LOG_DIR=C:\Iguana\logs\"
