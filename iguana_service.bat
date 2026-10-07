@@ -40,5 +40,6 @@ echo.
 echo Successfully created:
 echo   %OUTPUT%
 echo.
+cat %OUTPUT%
 
 exit /b 0
