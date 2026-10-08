@@ -15,7 +15,7 @@ call e-IguanaMainRepo_createIfNeeded.bat || goto :error
 call f-IguanaConfiguration_extract.bat || goto :error
 call g-IguanaConfiguration_alter.bat || goto :error
 call h-IguanaConfiguration_insert.bat || goto :error
-call i-StartService.bat || goto :error
+call j-StartService.bat || goto :error
 
 echo.
 echo ============================================================
