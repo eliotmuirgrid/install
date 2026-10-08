@@ -13,7 +13,7 @@ rem This is what you use for net stop Iguana62 in the command line and in servic
 set "IGUANA_SERVICE_NAME=Iguana62"
 
 rem This description of the Iguana service in the services window.
-set "IGUANA_SERVICE_DESCRIPTION=Iguana 6.2.0 Install"
+set "IGUANA_SERVICE_DESCRIPTION=iNTERFACEWARE Iguana 6.2.0 Install"
 
 
 if not defined IGUANA_SOURCE set "IGUANA_SOURCE=NEW"
