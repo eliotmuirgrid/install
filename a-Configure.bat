@@ -4,7 +4,11 @@ set "IGUANA_APP_DIR=C:\Iguana-6.2.0\"
 set "IGUANA_HTTP_PORT=6999"
 set "IGUANA_WORKING_DIR=C:\IguanaConfig\"
 set "IGUANA_LOG_DIR=C:\Iguana\logs\"
-set "IGUANA_SERVICE_NAME=Iguana2"
+
+rem This is what you use for net stop Iguana62 in the command line and in services window.
+set "IGUANA_SERVICE_NAME=Iguana62"
+
+rem This description of the Iguana service in the services window.
 set "IGUANA_SERVICE_DESCRIPTION=Iguana 6.2.0 Install"
 
 
