@@ -2,7 +2,9 @@
 
 ## 1. Create a working directory
 
-Open **Command Prompt** and run:
+Open **Command Prompt** as Administrator and run:
+
+Do not use Powershell
 
 ```cmd
 cd %USERPROFILE%
@@ -48,6 +50,13 @@ Then:
 ```cmd
 cd scripts
 ```
+
+The run 0-git_setup:
+
+```cmd
+o-git_setup
+```
+
 
 ## How to clean things up on windows in at the command line:
 
