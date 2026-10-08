@@ -67,6 +67,9 @@ set "IGUANA_LOG_DIR=C:\Iguana\logs\"
 set "IGUANA_SERVICE_NAME=Iguana2"
 set "IGUANA_SERVICE_DESCRIPTION=Iguana New Install"
 ```
+Then follow the steps in order to methodically install the new Iguana service.  If this is
+first time you have done this process read each script in turn.  The scripts are labeled
+with letters in order.
 
 ## How to clean things up on windows in at the command line:
 
